@@ -6,12 +6,10 @@ let convertHandler = new ConvertHandler()
 
 suite('Unit Tests', function () {
   test('should correctly read a whole number input', function () {
-    assert(convertHandler.getNum(55)).to.be.a('number')
+    assert.equal(convertHandler.getNum('5mi'), 5)
   })
 
   test('should correctly read a decimal number input', function () {
-    assert.equal(convertHandler.getNum(4.5), 4.5)
-
-    done()
+    assert.equal(convertHandler.getNum('4.5km'), 4.5)
   })
 })
